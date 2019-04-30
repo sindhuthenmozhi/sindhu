@@ -1,0 +1,38 @@
+<html>
+<body>
+<form>
+	NAME<input type="text" id="text1" maxlength="10"><br><br>
+	PASSWORD<input type="password" id="pwd1"><br><br>
+	<input type="checkbox" id="v1" name="laptop" value="Keys">Keys<br><br>
+	<input type="checkbox" id="v2" name="laptop" value="Hard drive">Hard drive<br><br>
+	<input type="checkbox" id="v3" name="laptop" value="Mother board">Mothet boardrd<br><br>
+	<input type="button" id="button1" value="click" onclick="funt()">
+</form>
+<script>
+	function funt()
+	{
+		var uid=document.getElementById("text1").value;
+		var pwd=document.getElementById("pwd1").value;
+		var lap=document.getElementsByNames("laptop");
+	    var lap1=[];
+		for(var i=0;i<lap.length;i++)
+		{
+			if(lap[i].checked)
+			{
+				lap1[i]=lap[i].value;
+			}
+		}	
+		if(uid==pwd)
+		{
+			document.write("Welcome"+" "+uid);
+			for(var i=0;i<lap1.length;i++);
+			{
+				document.write("lap"+" "+lap1);
+			}
+		}	
+	}
+	
+	
+</script>
+</body>
+</html>
